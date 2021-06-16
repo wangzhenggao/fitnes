@@ -1,0 +1,96 @@
+main{
+    width: 100%;
+    height: 100%;
+    background: url('../img/sign-bg.jpg') no-repeat top center;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 29px;
+}
+.loginInfo{
+    width: 85%;
+    height: 100px;
+    color: white;
+
+}
+.fr{
+    flex: 3;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 24px;
+    font-weight:bold;
+    cursor: pointer;
+}
+.fl{
+    flex: 2;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 26px;
+    cursor: pointer;
+}
+ul{
+    width: 85%;
+    min-height: 284px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* input 框样式 */
+input{
+    width: 100%;
+    height: 50px;
+    border-radius: 33px;
+    background-color: rgba(171, 163, 185, 0.5);
+    color: white;
+    padding-left: 24px;
+}
+input::placeholder{
+    color: white;
+}
+
+/* 登录按钮样式 */
+.loginBtn{
+    width: 100%;
+    height: 50px;
+    border-radius: 33px;
+    background-color: rgb(71, 199, 71,0.6);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+li{
+    width: 100%;
+    color: white;
+}
+.Info{
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+}
+.Infos{
+    width: 100%;
+    position: relative;
+}
+.cettext{
+    margin-right: 60px;
+    position: absolute;
+    right: 25%;
+    top: 0;
+}
+.cettext02{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.fotr{
+    color: white;
+    margin-top: 183px;
+}

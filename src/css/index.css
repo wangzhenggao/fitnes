@@ -1,0 +1,62 @@
+/* 头部 */
+header{
+    width: 100%;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 24px;
+
+}
+/*身体  */
+main{
+    width: 100%;
+    height: 100%;
+    background: url('../img/advertisement-bg.jpg') no-repeat top center;
+    background-size: cover;
+    justify-content: flex-end;
+    position: relative;
+}
+/* 倒计时跳转页面 */
+.skipAd{
+    margin-right: 14px;
+    margin-top: 28px;
+    width: 105px;
+    height: 40px;
+    border-radius: 20px;
+   align-self: start;
+   border: 1px solid #BBBBBB ;
+   align-items: center;
+   justify-content: space-around;
+   background-color: white;
+}
+.go{
+    cursor: pointer;
+}
+.text-msg{
+    width: 100%;
+    position: absolute;
+    bottom: 324px;
+    text-align: center;
+    opacity: 0;
+    font-size: 0;
+    animation: textMsg 2s forwards;
+    color: #fff;
+}
+/* 定义一个动画效果 */
+@keyframes textMsg{
+    0%{
+        opacity: 0;
+     font-size: 0;
+     bottom: 324px;
+    }
+    50%{
+        opacity: 1;
+     font-size: 48px;
+     bottom: 150px;
+    }
+    100%{
+        opacity: 1;
+        font-size: 48px;
+        bottom: 124px;
+    }
+}

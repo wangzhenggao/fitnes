@@ -14,11 +14,21 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 
 //自动清除dist 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { homedir } = require('os');
 module.exports = {
   //  入口
   entry:{
+    // js css文件引入
+    dom:'./src/js/common/dom.js',
+    http:'./src/js/common/http.js',
+    utils:'./src/js/common/utils.js',
+    commonCSS:'./src/js/commonCSS.js',
+    captacha:'./src/lib/chptcha/captcha-mini.js',
+    // 页面打包
      index:'./src/js/index.js',
      login:'./src/js/login.js',
+     register:'./src/js/register.js',
+     home:'./src/js/home.js'
   },
   //  出口
   output: {
@@ -89,16 +99,27 @@ module.exports = {
     new HtmlWebpackPlugin({   //配置html打包的插件
       template: './src/page/index.html',//以哪个html文件作为打包的模板
       filename:'index.html',
-      chunks:'[index]'
+      chunks:['index','commonCSS','dom']
     }),      
     
     new HtmlWebpackPlugin({   //配置html打包的插件
         template: './src/page/login.html',//以哪个html文件作为打包的模板
         filename:'login.html',
-        chunks:'[login]'
+        chunks:['login','commonCSS','dom','http',"utils"]
       }),  
 
+      new HtmlWebpackPlugin({   //配置html打包的插件
+        template: './src/page/register.html',//以哪个html文件作为打包的模板
+        filename:'register.html',
+        chunks:['register','commonCSS','dom','http','captacha','utils']
+      }),  
       
+      new HtmlWebpackPlugin({   //配置html打包的插件
+        template: './src/page/home.html',//以哪个html文件作为打包的模板
+        filename:'home.html',
+        chunks:['home','commonCSS','dom','http']
+      }),  
+
     new MiniCssExtractPlugin({
       filename: 'css/[name].css' // 输出到css文件夹里
     }),
@@ -116,7 +137,7 @@ module.exports = {
     port: 666,  // 端口  8080 80  8081 8082
     open: true, // 自动打开服务
     publicPath: '/', // 静态资源查找路径
-    openPage: 'index.html', // 打开的页面
+    openPage: 'home.html', // 打开的页面
   },
   target: 'web', // 目标是浏览器
 

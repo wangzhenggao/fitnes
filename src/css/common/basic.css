@@ -1,0 +1,25 @@
+/*
+ * 可复用的公有布局
+ */
+
+ /* 鼠标光标 */
+.curs{
+    cursor: pointer;
+}
+
+/* 组件样式 */
+.totns{
+    width: 150px;
+    height: 150px;
+    background: rgb(0, 0, 0,.7);
+    position: fixed;
+    top: calc(50% - 75px);
+    right: calc(50% - 75px);
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+}
+.top{
+    font-size: 40px;
+    line-height: 246%;
+}

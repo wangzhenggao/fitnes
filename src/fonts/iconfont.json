@@ -1,0 +1,16 @@
+{
+  "id": "2586796",
+  "name": "wzg-damo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1382584",
+      "name": "微信 (1)",
+      "font_class": "weixin",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    }
+  ]
+}

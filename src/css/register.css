@@ -1,0 +1,49 @@
+.text{
+    width: 85%;
+    font-size: 15px;
+    color: #ccc;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+.Infos{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+ul{
+    width: 85%;
+    height: 470px;
+}
+#sc{
+    color: white;
+    /* border: solid 1px #000; */
+border: none;
+background:none;
+position: relative;
+top: 36px;
+left: 8px;
+}
+option{
+    background: skyblue;
+}
+.tel{
+    padding-left: 70px;
+}
+.Ver{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+}
+.VerifiInp{
+    width: 55%;
+    flex: 3;
+}
+.Verification{
+    margin-left: 30px;
+    height: 50px;
+    background-color: pink;
+}
+.fotr{
+    margin-bottom: 109px;
+    margin-top: 52px!important;
+}
