@@ -32,7 +32,8 @@ module.exports = {
      register:'./src/js/register.js',
      home:'./src/js/home.js',
      sports:'./src/js/sports.js',
-     about:'./src/js/about.js'
+     about:'./src/js/about.js',
+     information:'./src/js/information.js'
   },
   //  出口
   output: {
@@ -138,6 +139,14 @@ module.exports = {
         filename:'about.html',
         chunks:['about','commonCSS','dom','http','utils']
       }),  
+
+      // 个人信息页面
+      new HtmlWebpackPlugin({   //配置html打包的插件
+        template: './src/page/information.html',//以哪个html文件作为打包的模板
+        filename:'information.html',
+        chunks:['information','commonCSS','dom','http']
+      }),  
+
 // 打包css文件夹
     new MiniCssExtractPlugin({
       filename: 'css/[name].css' // 输出到css文件夹里
@@ -157,7 +166,7 @@ module.exports = {
     port: 666,  // 端口  8080 80  8081 8082
     open: true, // 自动打开服务
     publicPath: '/', // 静态资源查找路径
-    openPage: 'home.html', // 打开的页面
+    openPage: 'about.html', // 打开的页面
   },
   target: 'web', // 目标是浏览器
 

@@ -1,0 +1,135 @@
+body{
+    flex-direction: column;
+    background: #E8E8E8;
+}
+.portraitbox{
+    line-height: 120px;
+    font-size: 22px;
+    p{
+        margin-left: 15px;
+    }
+}
+header{
+    width: 100%;
+    height: 190px;
+    background: white;
+    padding: 26px 20px 20px 20px;
+    .portrait{
+        width: 32.1%;
+        height: 120px;
+        background: pink;
+        border-radius: 50%;
+        border: 2px solid #4294FF;
+        position: relative;
+    }
+    p{
+        margin-top: 5px;
+    }
+}
+main{
+    overflow-y: scroll;
+    flex-direction: column;
+    .rundata{
+        width: 100%;
+        height: 170px;
+        background: white;
+
+    }
+}
+        
+.runicon{
+    width: 100%;
+    display: flex;
+justify-content: space-between;
+padding-left: 25px;
+padding-right: 20px;
+ line-height: 100%;
+}
+.iconrun{
+   color: skyblue;
+   font-size: 18px; 
+   span{
+       color: #000;
+       margin-left: 7px;
+       font-size: 18px;
+   }
+}
+.icon2{
+    font-size: 22px;
+}
+.run{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    .dpfl{
+        flex: 2;
+        border-right: 1px dotted #BBBBBB;
+         padding-left: 34px;
+         height: 72px;
+    }
+    .dpfr{
+        flex: 2;
+        padding-left: 10px;
+    }
+}
+.texe{
+    color: rgba(138, 138, 138, 100);
+     font-size: 16px;
+     margin-bottom: 15px;
+}
+.texedata{
+    color: rgba(66, 148, 255, 100);
+font-size: 40px;
+span{
+    font-size: 14px;
+    color: black;
+}
+}
+// 徽章布局
+.hzbox{
+    width: 100%;
+    height: 170px;
+    background: white;
+    .box{
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        margin-top: 15px;
+        .badge{
+            width: 100px;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #BBBBBB;
+        }
+    }
+}
+.outBtn{
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    margin-top: 15px;
+    background: white;
+    color: #4294FF;
+    font-size: 18px;
+}
+// 蒙层
+.mc{
+    background: rgba(1, 1, 1,0.7);
+    height: 150px;
+    left: 30%;
+    position: fixed;
+    top: 37%;
+    width: 180px;
+    text-align: center;
+    border-radius: 15px;
+    display: none;
+    p{
+      color: white;
+      line-height: 100px;
+    }
+    button{
+        border-radius: 15px;
+        margin: 17px;
+    }
+}
