@@ -92,18 +92,37 @@ document.ready(function(){
         $http. post('http://139.9.177.51:8099/users/add',date,function(res){
           if(res.status===1){
                assembly.Tips(0,"账号已被注册")
-          }if(res.status===0){
-            assembly.Tips(1,"注册成功")
-            setTimeout(function(){
-                location.href='./login.html'
-            },2000)
-             
+          }
+          if(res.status===0){
+            // assembly.Tips(1,"注册成功")
+            // setTimeout(function(){
+            //     location.href='./login.html'
+            // },2000)
+             logins(date);
           }
         })
     })
 // 点击跳转登录
 goLogin.addEventListener('click',function(){
     location.href='./login.html'
+
+    
 })
+// 注册成功直接跳转首页
+function logins(data){
+    $http.post('http://139.9.177.51:8099/users/login',data,function(res){
+    // 请求成功
+    if(res.status===0){
+        assembly.Tips(1,"注册成功")
+            localStorage.setItem('data',JSON.stringify(res.data.user))
+            setTimeout(function(){
+                location.href='./home.html';
+            },2000)
+            
+        }else{
+            assembly.Tips(0,"密码或账户名错误")
+        }
+    })
+}
 })
 

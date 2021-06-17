@@ -3,11 +3,6 @@
     flex-direction: column;
 }
 
-footer{
-    width: 100%;
-    height: 77px;
-    background-color: red;
-}
 
 main{
     width: 100%;
@@ -28,7 +23,7 @@ main{
 header{
     width: 100%;
     height: 200px;
-    background-color: pink;
+    // background-color: pink;
 }
 // 打卡排名区域
 .RankingBox{
@@ -46,12 +41,19 @@ header{
         background-color: pink;
         margin-right: 22px;
         border-radius: 15px;
+        background:url('../img/index-card-rank.png')no-repeat #54AFD9;
+        background-position: 0px 33px;
+        background-size: 66%;
+        position: relative;
     }
     .punch{
         flex: 3;
         height: 150px;
-        background-color: pink;
         border-radius: 15px;
+        background:url('../img/index-card-sum.png')no-repeat skyblue; 
+        background-size: 64%;
+        background-position: 8px 20px;
+        position: relative;
     }
 }
 // 徽章区域
@@ -63,26 +65,112 @@ header{
     align-items: center;
     // margin-top: 20px;
     flex-wrap: wrap;
+   
     .rundate{
+        padding: 12px;
         width: 48%;
         height: 110px;background-color: pink;border-radius: 15px;
+        background:url('../img/index-card-data.png')no-repeat top center;
+        background-size: 100%;
+        position: relative;
     }
     .badge{
         width: 48%;
         height: 110px;background-color: pink;
         border-radius: 15px;
+       background:url('../img/index-card-badge.png') no-repeat #9DBDE3;
+       background-position: 1px 8px;
+    background-size: 56%;
+    position: relative;
     }
     
 }
 // 课程跑步区域
 .kcxl{
+    padding: 12px;
     width: 90%;
     height: 110px;
     background-color: pink;
+    background:url('../img/course-img04.jpg')no-repeat top center;
+    background-size: 100%;
+    border-radius: 15px;
 }
 .run{
+    padding: 12px;
     width: 90%;
     height: 110px;
     background-color: pink;
     margin-top: 20px;
+    background:url('../img/index-card-run.png')no-repeat top center;
+    background-size: 100%;
+    border-radius: 15px;
+}
+// 插件样式
+.swiper-container {
+    width: 100%;
+    height: 200px;
+}  
+// 渲染的数据样式
+.Rank{
+    color: #004E73;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+.RankInfo{
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    position: absolute;
+    bottom:  20px;
+    right: 10px;
+}
+.puchInfo{
+    color: rgba(0, 81, 119, 100);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+.punchBtn{
+    width: 100px;
+    height: 40px;
+    color: #004E73;
+    font-size: 16px;
+    border-radius: 20px;
+    background:none;
+    border: 2px solid #004E73;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+}
+.letext{
+    color: #004E73;
+    font-size: 16px;
+    border-radius: 20px;
+    background:none;
+    position: absolute;
+    font-weight: bold;
+    top: 10px;
+    left: 10px;
+}
+.badgeInfo{
+    color: #004E73;
+    font-size: 16px;
+    border-radius: 20px;
+    background:none;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    span{
+        color: #004E73;
+    font-size: 60px;
+    }
+}
+.textsty{
+    color: white;
+    font-size: 16px;
 }

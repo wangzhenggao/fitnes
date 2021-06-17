@@ -32,18 +32,17 @@ let http={
     // get请求
     get:function(url,data,callback){
        
-    // 实例化ajax
-    let xhr=new XMLHttpRequest();
+        let xhr=new XMLHttpRequest();
 
-    // 请求方式 +数据
-    xhr.open('get',url)
-    // 监听ajax
-    xhr.onreadystatechange=function(){
-        // 判断步骤  和http状态码
-        if(xhr.readyState===4 && xhr.status===200){
-            // 通过回调函数把数据传回去: 传回去的事件要将拿到的json数据类型转换成js复杂数据类型
-            callback(JSON.parse(xhr.responseText));
-        }
+        // 请求方式 +数据
+        xhr.open('get',url+'?'+urlData(data))
+        // 监听ajax
+        xhr.onreadystatechange=function(){
+            // 判断步骤  和http状态码
+            if(xhr.readyState===4 && xhr.status===200){
+                // 通过回调函数把数据传回去: 传回去的事件要将拿到的json数据类型转换成js复杂数据类型
+                callback(JSON.parse(xhr.responseText));
+            }
     }
     // 发送数据
     xhr.send(data);

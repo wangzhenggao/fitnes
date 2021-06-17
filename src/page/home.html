@@ -10,7 +10,17 @@
 
 <body class="flx">
     <!-- 头部 -->
-    <header></header>
+    <header>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+             <img class="swiper-slide" src="../img/course-img01.jpg" alt="">
+             <img class="swiper-slide" src="../img/index-card-run.png" alt="">
+             <img class="swiper-slide" src="../img/健身2.jpg" alt="">
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </header>
     <!-- 身体 -->
     <main>
         <!-- 大容器 -->
@@ -19,24 +29,43 @@
             <!-- 排名打卡区域 -->
             <div class="RankingBox">
                 <!-- 今日排名 -->
-                <div class="Ranking"></div>
+                <div class="Ranking">
+                    <div class="Rank">
+                        今日排名 
+                    </div>
+                       <div class="RankInfo">
+                       </div>
+                </div>
                 <!-- 打卡 -->
-                <div class="punch"></div>
+                <div class="punch">
+                     <div class="puchInfo">
+                         累计打卡<span class="punchdate"></span>天
+                     </div>
+                    <button class="punchBtn"></button>
+                </div>
             </div>
 <!-- 徽章区域 -->
             <div class="box2">
                 
-                <div class="rundate"></div>
+                <div class="rundate">
+                    <p class="textsty">运动数据</p>
+                </div>
 
-                <div class="badge"></div>
+                <div class="badge">
+                  <p class="letext">累计运动徽章</p>
+                   <p class="badgeInfo"><span class="badgeDate"></span>枚</p>
+                </div>
             </div>
             <!-- 课程训练户外跑步 -->
-            <div class="kcxl"></div>
-            <div class="run"></div>
+            <div class="kcxl">
+                <p class="textsty">课程训练</p>
+            </div>
+            <div class="run">
+                <p class="textsty">户外跑步</p>
+            </div>
         </div>
     </main>
-    <!-- 页脚 -->
-    <footer></footer>
+
 </body>
 
 </html>

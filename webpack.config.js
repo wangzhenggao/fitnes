@@ -18,17 +18,21 @@ const { homedir } = require('os');
 module.exports = {
   //  入口
   entry:{
-    // js css文件引入
+    // 公共可复用js css文件引入
     dom:'./src/js/common/dom.js',
     http:'./src/js/common/http.js',
     utils:'./src/js/common/utils.js',
     commonCSS:'./src/js/commonCSS.js',
+    // 三方插件
     captacha:'./src/lib/chptcha/captcha-mini.js',
-    // 页面打包
+    swiper:'./src/lib/swiper/swiper-bundle.js',
+    // 页面打包对应的js
      index:'./src/js/index.js',
      login:'./src/js/login.js',
      register:'./src/js/register.js',
-     home:'./src/js/home.js'
+     home:'./src/js/home.js',
+     sports:'./src/js/sports.js',
+     about:'./src/js/about.js'
   },
   //  出口
   output: {
@@ -101,28 +105,44 @@ module.exports = {
       filename:'index.html',
       chunks:['index','commonCSS','dom']
     }),      
-    
+    // 登录页配置
     new HtmlWebpackPlugin({   //配置html打包的插件
         template: './src/page/login.html',//以哪个html文件作为打包的模板
         filename:'login.html',
         chunks:['login','commonCSS','dom','http',"utils"]
       }),  
-
+// 注册页配置
       new HtmlWebpackPlugin({   //配置html打包的插件
         template: './src/page/register.html',//以哪个html文件作为打包的模板
         filename:'register.html',
         chunks:['register','commonCSS','dom','http','captacha','utils']
       }),  
       
+      // 首页
       new HtmlWebpackPlugin({   //配置html打包的插件
         template: './src/page/home.html',//以哪个html文件作为打包的模板
         filename:'home.html',
-        chunks:['home','commonCSS','dom','http']
+        chunks:['home','commonCSS','dom','http','swiper','utils']
       }),  
 
+      // 运动页面
+      new HtmlWebpackPlugin({   //配置html打包的插件
+        template: './src/page/sports.html',//以哪个html文件作为打包的模板
+        filename:'sports.html',
+        chunks:['sports','commonCSS','dom','http','utils']
+      }),  
+
+      // 用户信息页面
+      new HtmlWebpackPlugin({   //配置html打包的插件
+        template: './src/page/about.html',//以哪个html文件作为打包的模板
+        filename:'about.html',
+        chunks:['about','commonCSS','dom','http','utils']
+      }),  
+// 打包css文件夹
     new MiniCssExtractPlugin({
       filename: 'css/[name].css' // 输出到css文件夹里
     }),
+    // 插件使用
     new OptimizeCssAssetsWebpackPlugin(),
     new CleanWebpackPlugin()
   ],
