@@ -6,43 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body class="dpflex">
+<body>
     <!-- 头部 -->
     <div class="head">
         <i class="iconfont iconleftarrow infoicon"></i><span>个人资料</span>
     </div>
-    <!-- 更换头像 -->
-    <div class="portrait dpflex">
-        <p>更换头像</p>
-        <div class="newtxbox dpflex">
-            <div class="newtx">
-            </div>
-            <i class="iconfont iconarrow-right infoicon1"></i>
+    <div class="weui-cell weui-cell_active">
+        <div class="weui-cell__hd"><label class="weui-label">昵称</label></div>
+        <div class="weui-cell__bd">
+            <input id="js_input" class="weui-input new-nickname" placeholder="填写新昵称" />
         </div>
-        
     </div>
-    <!-- 修改用户名 -->
-    <div class="newname dpflex">
-        <p>昵称</p> <p class="newdata">用户名</p>
+    <div class="weui-cell weui-cell_active weui-cell_access" id="sex">
+        <div class="weui-cell__bd">
+            <span class="demo_badge_title">性别</span>
+        </div>
+        <div class="weui-cell__ft" id="sextext">男</div>
+    </div>
+    <div class="weui-cell weui-cell_active weui-cell_access" id="birthday">
+        <div class="weui-cell__bd">
+            <span class="demo_badge_title">生日</span>
+        </div>
+        <div class="weui-cell__ft" id="birthdayText">2021-01-01</div>
     </div>
 
-    <div class="newname dpflex p0">
-        <p>性别</p> <p class="newdata">男<i class="iconfont iconarrow-right irt infoicon1"></i></p>
+    <div class="weui-cell weui-cell_active weui-cell_access" id="province">
+        <div class="weui-cell__bd">
+            <span class="demo_badge_title">省份</span>
+        </div>
+        <div class="weui-cell__ft" id="provinceText">请选择</div>
     </div>
 
-    <div class="newname dpflex p0">
-        <p>生日</p> <p class="newdata">2020-11-11<i class="iconfont iconarrow-right irt infoicon1"></i></p>
+    <div class="weui-cell weui-cell_active weui-cell_access"id="city">
+        <div class="weui-cell__bd">
+            <span class="demo_badge_title">城市</span>
+        </div>
+        <div class="weui-cell__ft" id="cityText">请选择</div>
+    </div>
+    <div class="weui-cells__group weui-cells__group_form ">
+        <div class="weui-cells__title">个人简介</div>
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell ">
+                <div class="weui-cell__bd">
+                    <textarea class="weui-textarea textareaval" placeholder="请描述你" rows="3"></textarea>
+                    <div class="weui-textarea-counter"><span>0</span>/200</div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="newname dpflex p0">
-        <p>所在城市</p> <p class="newdata">四川省 成都市<i class="iconfont iconarrow-right irt infoicon1"></i></p>
-    </div>
-    <!-- 个人简介 -->
-    <div class="profile mt20">
-       <p>
-        个人简介
-       </p>
-       <textarea class="InfoInp" placeholder="多行输入"></textarea>
+    <div class="Save-data">
+          提交信息
     </div>
 </body>
 </html>

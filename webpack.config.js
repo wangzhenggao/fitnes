@@ -26,6 +26,8 @@ module.exports = {
     // 三方插件
     captacha:'./src/lib/chptcha/captcha-mini.js',
     swiper:'./src/lib/swiper/swiper-bundle.js',
+    weui:'./src/lib/weui/weui.js',
+
     // 页面打包对应的js
      index:'./src/js/index.js',
      login:'./src/js/login.js',
@@ -144,7 +146,7 @@ module.exports = {
       new HtmlWebpackPlugin({   //配置html打包的插件
         template: './src/page/information.html',//以哪个html文件作为打包的模板
         filename:'information.html',
-        chunks:['information','commonCSS','dom','http']
+        chunks:['information','commonCSS','dom','http','weui',"utils"]
       }),  
 
 // 打包css文件夹
@@ -166,7 +168,7 @@ module.exports = {
     port: 666,  // 端口  8080 80  8081 8082
     open: true, // 自动打开服务
     publicPath: '/', // 静态资源查找路径
-    openPage: 'about.html', // 打开的页面
+    openPage: 'information.html', // 打开的页面
   },
   target: 'web', // 目标是浏览器
 

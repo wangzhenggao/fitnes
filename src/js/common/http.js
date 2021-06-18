@@ -31,9 +31,10 @@ function urlData(obj) {
 let http={
     // get请求
     get:function(url,data,callback){
-       
+        if(typeof data =='function'){
+            callback=data;
+        }
         let xhr=new XMLHttpRequest();
-
         // 请求方式 +数据
         xhr.open('get',url+'?'+urlData(data))
         // 监听ajax
