@@ -44,3 +44,12 @@
 .active{
     color: blue;
 }
+.mr24{
+    margin-right: 24px;
+}
+.tc{
+    text-align: center;
+}
+.tr{
+    text-align: right;
+}

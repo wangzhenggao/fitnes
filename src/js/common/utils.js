@@ -49,7 +49,6 @@ assembly.addFooter = function (str) {
    let footer = document.createElement('div');
    footer.className = 'footer dpflex';
    let html = 
-   
    `<a href='./home.html'>
    <div class="${str==='home'?'item active':'item'}">
    <i class="iconfont iconhome icon"></i>
@@ -68,5 +67,16 @@ assembly.addFooter = function (str) {
     document.querySelector('body').appendChild(footer);
 }
 
+// 特殊字符串切割
+assembly.strTo=function(str){
+    let obj={}
+    str=str.substr(1)
+    let arr=str.split('&')
+   arr.forEach(function(item) {
+      let arr1=item.split('=')
+      obj[arr1[0]]=arr1[1]
+   });
+   return obj;
+}
 //  挂载到window
 window.assembly = assembly;

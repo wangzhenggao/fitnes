@@ -27,6 +27,7 @@ module.exports = {
     captacha:'./src/lib/chptcha/captcha-mini.js',
     swiper:'./src/lib/swiper/swiper-bundle.js',
     weui:'./src/lib/weui/weui.js',
+    
 
     // 页面打包对应的js
      index:'./src/js/index.js',
@@ -35,7 +36,10 @@ module.exports = {
      home:'./src/js/home.js',
      sports:'./src/js/sports.js',
      about:'./src/js/about.js',
-     information:'./src/js/information.js'
+     information:'./src/js/information.js',
+     Details:'./src/js/Details.js',
+     videoList:'./src/js/videoList.js',
+     exerciseData:'./src/js/exerciseData.js'
   },
   //  出口
   output: {
@@ -148,6 +152,24 @@ module.exports = {
         filename:'information.html',
         chunks:['information','commonCSS','dom','http','weui',"utils"]
       }),  
+       // 课程详情页面
+       new HtmlWebpackPlugin({   //配置html打包的插件
+        template: './src/page/Details.html',//以哪个html文件作为打包的模板
+        filename:'Details.html',
+        chunks:['Details','commonCSS','dom','http',"utils"]
+      }),  
+
+      new HtmlWebpackPlugin({   //配置html打包的插件
+        template: './src/page/videoList.html',//以哪个html文件作为打包的模板
+        filename:'videoList.html',
+        chunks:['videoList','commonCSS','dom','http',"utils"]
+      }),  
+      
+      new HtmlWebpackPlugin({   //配置html打包的插件
+        template: './src/page/exerciseData.html',//以哪个html文件作为打包的模板
+        filename:'exerciseData.html',
+        chunks:['exerciseData','commonCSS','dom','http',"utils"]
+      }), 
 
 // 打包css文件夹
     new MiniCssExtractPlugin({
@@ -168,7 +190,7 @@ module.exports = {
     port: 666,  // 端口  8080 80  8081 8082
     open: true, // 自动打开服务
     publicPath: '/', // 静态资源查找路径
-    openPage: 'information.html', // 打开的页面
+    openPage: 'exerciseData.html', // 打开的页面
   },
   target: 'web', // 目标是浏览器
 
