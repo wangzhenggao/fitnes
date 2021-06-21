@@ -182,7 +182,7 @@ module.exports = {
   // mode 环境
   // development 本地开发环境
   // production 线上生成环境
-  mode: 'development',
+  mode: process.env.NODE_ENV,
 
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'), // 启动服务器目录
@@ -190,7 +190,7 @@ module.exports = {
     port: 666,  // 端口  8080 80  8081 8082
     open: true, // 自动打开服务
     publicPath: '/', // 静态资源查找路径
-    openPage: 'exerciseData.html', // 打开的页面
+    openPage: 'index.html', // 打开的页面
   },
   target: 'web', // 目标是浏览器
 

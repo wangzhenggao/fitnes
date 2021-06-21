@@ -7,6 +7,7 @@ document.ready(function(){
    let mc=document.querySelector('.mc')
    let fileBtn=document.querySelector('.file-btn')
    let hed=document.querySelector('#hed')
+   let rundata=document.querySelector('.rundata')
 //    获取动态渲染的数据节点
    let newqm=document.querySelector('.newqm')
    let mint=document.querySelector('.mint')
@@ -98,4 +99,9 @@ function UpuserPost(data){
 hed.addEventListener('click',function(){
   location.href='./information.html'
 })
+rundata.addEventListener('click',function(){
+   location.href='exerciseData.html'
+})
+
+
 })

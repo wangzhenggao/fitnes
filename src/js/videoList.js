@@ -67,6 +67,7 @@ document.ready(function(){
     stop.addEventListener('click',function(){
         vid.pause();
         Mantle.style.display='block'
+        dynaTitl.textContent=title.textContent;
     })
     // 进度条
     setInterval(function(){

@@ -40,7 +40,6 @@ document.ready(function () {
     // 个人简介
     textareaval.addEventListener('change', function () {
         data.sign = this.value
-        console.log(data);
     })
     // 性别选择
     sex.addEventListener('click', function () {
@@ -149,8 +148,8 @@ document.ready(function () {
     })
     // 渲染页面
     function getNewInfo() {
-        $http.get('http://139.9.177.51:8099/users/accountinfo', { userId: user.userId }, function (res) {
-            if (res.data.gender) {
+        $http.get('http://139.9.177.51:8099/users/accountinfo', { userId: user.userId }, function (res) {   
+        if (res.data.gender) {
                 sextext.textContent = res.data.gender;
                 data.gender = res.data.gender;
             }
@@ -160,7 +159,7 @@ document.ready(function () {
                 data.birthday = res.data.birthday;
             }
             // console.log(res.data.address);
-            if (res.data.address) {
+            if (res.data.address!='null,null') {
                 //split将字符串转换成数组  ','分隔符
                 res.data.address = res.data.address.split(',')
                 // 渲染省份
@@ -180,6 +179,5 @@ document.ready(function () {
         })
 
     }
-    console.log(data);
 
 })
